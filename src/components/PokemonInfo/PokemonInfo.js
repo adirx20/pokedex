@@ -7,15 +7,35 @@ function PokemonInfo({ searchType, searchTerm }) {
 
     useEffect(() => {
         fetchPokemonData(searchType, searchTerm)
-        .then((data) => setPokemonData(data))
-        .catch((error) => {
-            console.log('Error fetching Pokemon data: ', error);
-        });
+            .then((data) => setPokemonData(data))
+            .catch((error) => {
+                console.log('Error fetching Pokemon data: ', error);
+            });
     }, [searchType, searchTerm]);
 
-    if (!pokemonData) {
-        return <div>Loading...</div>;
+    if (searchTerm === '') {
+        return <div>No data</div>
     }
+
+    if (!pokemonData) {
+        return <div>Not found</div>;
+    }
+
+    const ability = pokemonData.abilities
+        ? pokemonData.abilities[0].ability.name
+        : 'Unknown';
+
+    const moveA = pokemonData.moves
+        ? pokemonData.moves[0].move.name
+        : 'Unknown';
+
+    const moveB = pokemonData.moves
+        ? pokemonData.moves[1].move.name
+        : 'Unknown';
+
+    const moveC = pokemonData.moves
+        ? pokemonData.moves[2].move.name
+        : 'Unknown';
 
     return (
         <div className='pokemon-info'>
@@ -23,8 +43,8 @@ function PokemonInfo({ searchType, searchTerm }) {
             <img src={pokemonData.imageUrl} alt={pokemonData.name} />
             <p>Height: {pokemonData.height}0cm</p>
             <p>Weight: {pokemonData.weight}00gr</p>
-            <p>Ability: {pokemonData.abilities[0].ability.name}</p>
-            <p>Moves: {pokemonData.moves[0].move.name}, {pokemonData.moves[1].move.name}, {pokemonData.moves[2].move.name}</p>
+            <p>Ability: {ability}</p>
+            <p>Moves: {moveA}</p>
         </div>
     );
 }

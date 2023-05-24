@@ -1,22 +1,33 @@
 import React, { useState } from 'react';
-import PokemonInfo from './PokemonInfo/PokemonInfo';
+import SearchForm from '../SearchForm/SearchForm';
+import PokemonInfo from '../PokemonInfo/PokemonInfo';
 
 function Main() {
+  const [inputValue, setInputValue] = useState('');
   const [searchType, setSearchType] = useState('name');
   const [searchTerm, setSearchTerm] = useState('');
 
+  const handleTypeChange = (e) => {
+    setSearchType(e.target.value);
+  }
+
+  const handleTermChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    setSearchTerm(inputValue);
     // Handle form submission, such as fetching data
     console.log('Submit form:', searchType, searchTerm);
   };
 
   return (
     <main>
-      <form onSubmit={handleSubmit}>
+      <form className='form' onSubmit={handleSubmit}>
         <select
           value={searchType}
-          onChange={(e) => setSearchType(e.target.value)}
+          onChange={handleTypeChange}
         >
           <option value="name">Name</option>
           <option value="species">Species</option>
@@ -24,9 +35,9 @@ function Main() {
         </select>
         <input
           type="text"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          value={inputValue}
           placeholder="Enter search term"
+          onChange={handleTermChange}
         />
         <button type="submit">Search</button>
       </form>
