@@ -13,7 +13,10 @@ export function fetchPokemonData(searchType, searchTerm) {
     }
 
     return fetch(apiUrl)
-    .then((response) => response.json())
+    .then((response) => {
+        console.log('API response: ', response);
+        return response.json();
+    })
     .catch((error) => {
         console.log('Error fetching Pokemon data: ', error);
     });

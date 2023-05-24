@@ -7,7 +7,10 @@ function PokemonInfo({ searchType, searchTerm }) {
 
     useEffect(() => {
         fetchPokemonData(searchType, searchTerm)
-            .then((data) => setPokemonData(data))
+            .then((data) => {
+                setPokemonData(data);
+                console.log('pokemon data: ', pokemonData);
+            })
             .catch((error) => {
                 console.log('Error fetching Pokemon data: ', error);
             });
@@ -21,30 +24,62 @@ function PokemonInfo({ searchType, searchTerm }) {
         return <div>Not found</div>;
     }
 
-    const ability = pokemonData.abilities
-        ? pokemonData.abilities[0].ability.name
-        : 'Unknown';
+    const name = pokemonData.name;
+    // const imageDefault = pokemonData.sprites.front_default;
+    // const imageShiny = pokemonData.sprites.front_shiny;
+    const height = pokemonData.height;
+    const weight = pokemonData.weight;
+    const baseExp = pokemonData.base_experience;
 
-    const moveA = pokemonData.moves
-        ? pokemonData.moves[0].move.name
-        : 'Unknown';
+    const imageDefault = pokemonData.sprites
+        ? pokemonData.sprites.front_default
+        : '';
 
-    const moveB = pokemonData.moves
-        ? pokemonData.moves[1].move.name
-        : 'Unknown';
+    const imageShiny = pokemonData.sprites
+        ? pokemonData.sprites.front_shiny
+        : '';
 
-    const moveC = pokemonData.moves
-        ? pokemonData.moves[2].move.name
-        : 'Unknown';
+    const abilities = pokemonData.abilities
+        ? pokemonData.abilities.map((ability) => ability.ability.name)
+        : [];
+
+    const moves = pokemonData.moves
+        ? pokemonData.moves.map((move) => move.move.name)
+        : [];
+
 
     return (
         <div className='pokemon-info'>
-            <h2>{pokemonData.name}</h2>
-            <img src={pokemonData.imageUrl} alt={pokemonData.name} />
-            <p>Height: {pokemonData.height}0cm</p>
-            <p>Weight: {pokemonData.weight}00gr</p>
-            <p>Ability: {ability}</p>
-            <p>Moves: {moveA}</p>
+            <h2>{name}</h2>
+            <img className='image_default' src={imageDefault} alt={name} />
+            <img className='image_shiny' src={imageShiny} alt={`Shiny ${name}`} />
+            <p>Base experience: {baseExp}</p>
+            <p>Height: {height}0cm</p>
+            <p>Weight: {weight}00gr</p>
+            {abilities.length > 0 && (
+                <div>
+                    <p>Abilities:</p>
+                    <ul>
+                        {abilities.map((ability, index) => (
+                            <li key={index}>
+                                {ability}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+            {moves.length > 0 && (
+                <div>
+                    <p>Moves:</p>
+                    <ul>
+                        {moves.map((move, index) => (
+                            <li key={index}>
+                                {move}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
         </div>
     );
 }
