@@ -24,8 +24,9 @@ function Main() {
 
   return (
     <main>
-      <form className='form' onSubmit={handleSubmit}>
-        <select
+      <SearchForm />
+      {/* <form className='form' onSubmit={handleSubmit}> */}
+      {/* <select
           value={searchType}
           onChange={handleTypeChange}
         >
@@ -40,10 +41,11 @@ function Main() {
           onChange={handleTermChange}
         />
         <button type="submit">Search</button>
-      </form>
+      </form> */}
 
-      <PokemonInfo searchType={searchType} searchTerm={searchTerm} />
-    </main>
+      {/* <PokemonInfo searchType={searchType} searchTerm={searchTerm} /> */}
+
+    </ main>
   );
 }
 

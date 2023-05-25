@@ -25,8 +25,6 @@ function PokemonInfo({ searchType, searchTerm }) {
     }
 
     const name = pokemonData.name;
-    // const imageDefault = pokemonData.sprites.front_default;
-    // const imageShiny = pokemonData.sprites.front_shiny;
     const height = pokemonData.height;
     const weight = pokemonData.weight;
     const baseExp = pokemonData.base_experience;
@@ -50,36 +48,48 @@ function PokemonInfo({ searchType, searchTerm }) {
 
     return (
         <div className='pokemon-info'>
-            <h2>{name}</h2>
-            <img className='image_default' src={imageDefault} alt={name} />
-            <img className='image_shiny' src={imageShiny} alt={`Shiny ${name}`} />
-            <p>Base experience: {baseExp}</p>
-            <p>Height: {height}0cm</p>
-            <p>Weight: {weight}00gr</p>
-            {abilities.length > 0 && (
-                <div>
-                    <p>Abilities:</p>
-                    <ul>
-                        {abilities.map((ability, index) => (
-                            <li key={index}>
-                                {ability}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            )}
-            {moves.length > 0 && (
-                <div>
-                    <p>Moves:</p>
-                    <ul>
-                        {moves.map((move, index) => (
-                            <li key={index}>
-                                {move}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            )}
+            <h2 className='pokemon-info__title'>{name}</h2>
+            <div className='pokemon-info__image-container'>
+                <img
+                    className='pokemon-info__image_default'
+                    src={imageDefault}
+                    alt={name}
+                />
+                <img
+                    className='pokemon-info__image_shiny'
+                    src={imageShiny}
+                    alt={`Shiny ${name}`}
+                />
+            </div>
+            <div className='pokemon-info__text-container'>
+                <p>Base experience: {baseExp}</p>
+                <p>Height: {height}0cm</p>
+                <p>Weight: {weight}00gr</p>
+                {abilities.length > 0 && (
+                    <div>
+                        <p>Abilities:</p>
+                        <ul>
+                            {abilities.map((ability, index) => (
+                                <li key={index}>
+                                    {ability}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+                {moves.length > 0 && (
+                    <div>
+                        <p>Moves:</p>
+                        <ul>
+                            {moves.map((move, index) => (
+                                <li key={index}>
+                                    {move}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+            </div>
         </div>
     );
 }

@@ -1,0 +1,27 @@
+/* navigation */
+.navigation {
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.navigation__menu-button {
+    max-width: 178px;
+    height: 79px;
+    margin: 0;
+    padding: 0 30px;
+    color: rgba(255, 255, 255, 1);
+    background: none;
+    border: none;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    cursor: pointer;
+    transition: border-bottom .3s linear;
+}
+
+.navigation__menu-button_active {
+    border-bottom: 3px solid rgba(255, 255, 255, 1);
+}
