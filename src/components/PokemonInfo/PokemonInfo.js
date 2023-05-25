@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './PokemonInfo.css';
 import { fetchPokemonData } from '../../utils/api';
 
-function PokemonInfo({ searchType, searchTerm }) {
+function PokemonInfo({ pokemonName, searchType, searchTerm }) {
     const [pokemonData, setPokemonData] = useState(null);
 
     useEffect(() => {
-        fetchPokemonData(searchType, searchTerm)
+        fetchPokemonData({ pokemonName })
             .then((data) => {
                 setPokemonData(data);
                 console.log('pokemon data: ', pokemonData);
@@ -14,9 +14,9 @@ function PokemonInfo({ searchType, searchTerm }) {
             .catch((error) => {
                 console.log('Error fetching Pokemon data: ', error);
             });
-    }, [searchType, searchTerm]);
+    }, [pokemonName]);
 
-    if (searchTerm === '') {
+    if (pokemonName === '') {
         return <div>No data</div>
     }
 

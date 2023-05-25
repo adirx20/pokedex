@@ -6,18 +6,19 @@ function SearchForm() {
     const [inputValue, setInputValue] = useState('');
     const [searchType, setSearchType] = useState('name');
     const [searchTerm, setSearchTerm] = useState('');
+    const [pokemonName, setPokemonName] = useState('');
 
     const handleTypeChange = (e) => {
         setSearchType(e.target.value);
     }
 
-    const handleTermChange = (e) => {
+    const handleChange = (e) => {
         setInputValue(e.target.value);
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setSearchTerm(inputValue);
+        setPokemonName(inputValue);
         // Handle form submission, such as fetching data
         console.log('Submit form:', searchType, searchTerm);
     };
@@ -37,8 +38,8 @@ function SearchForm() {
                     className='search-from__input'
                     type="text"
                     value={inputValue}
-                    placeholder="Enter search term"
-                    onChange={handleTermChange}
+                    placeholder="Enter pokemon name"
+                    onChange={handleChange}
                 />
                 <button
                     className='search-from__button'
@@ -48,7 +49,7 @@ function SearchForm() {
                 </button>
             </form>
 
-            <PokemonInfo searchType={searchType} searchTerm={searchTerm} />
+            <PokemonInfo pokemonName={pokemonName} />
         </div>
     );
 };

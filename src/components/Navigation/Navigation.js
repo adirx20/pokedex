@@ -10,10 +10,10 @@ function Navigation({ children }) {
         // onClose
     }
 
-    // function navigateToSavedNews() {
-    //     navigate('/saved-news');
-    //     // onClose
-    // }
+    function navigateToAbout() {
+        navigate('/about');
+        // onClose
+    }
 
     return (
         <nav className='navigation'>
@@ -25,8 +25,9 @@ function Navigation({ children }) {
             </button>
             <button
                 className='navigation__menu-button'
+                onClick={navigateToAbout}
             >
-                Saved News
+                About
             </button>
             {children}
         </nav>

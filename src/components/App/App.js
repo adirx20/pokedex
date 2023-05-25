@@ -5,7 +5,7 @@ import CurrentUserContext from '../../contexts/CurrentUserContext';
 import Header from '../Header/Header';
 import Navigation from '../Navigation/Navigation';
 import Main from '../Main/Main';
-import PokemonInfo from '../PokemonInfo/PokemonInfo';
+import About from '../About/About';
 import Footer from '../Footer/Footer';
 
 function App() {
@@ -24,6 +24,12 @@ function App() {
               path='/'
               element={
                 <Main />
+              }
+            />
+            <Route
+              path='/about'
+              element={
+                <About />
               }
             />
           </Routes>
