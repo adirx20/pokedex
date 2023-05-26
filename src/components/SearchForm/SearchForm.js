@@ -20,7 +20,7 @@ function SearchForm() {
         e.preventDefault();
         setPokemonName(inputValue);
         // Handle form submission, such as fetching data
-        console.log('Submit form:', searchType, searchTerm);
+        console.log('Submit form:', pokemonName);
     };
 
     return (
