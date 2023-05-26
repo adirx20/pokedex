@@ -23,7 +23,7 @@ function Main() {
   };
 
   return (
-    <main>
+    <main className='main'>
       <SearchForm />
       {/* <form className='form' onSubmit={handleSubmit}> */}
       {/* <select

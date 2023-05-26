@@ -1,16 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './SearchForm.css';
 import PokemonInfo from '../PokemonInfo/PokemonInfo';
+import Preloader from '../Preloader/Preloader';
+import { fetchPokemonData } from '../../utils/api';
 
 function SearchForm() {
     const [inputValue, setInputValue] = useState('');
-    const [searchType, setSearchType] = useState('name');
-    const [searchTerm, setSearchTerm] = useState('');
     const [pokemonName, setPokemonName] = useState('');
+    const [pokemonData, setPokemonData] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
 
-    const handleTypeChange = (e) => {
-        setSearchType(e.target.value);
-    }
+    useEffect(() => {
+        if (pokemonName !== '') {
+            setIsLoading(true);
+            fetchPokemonData({ pokemonName })
+                .then((data) => {
+                    setPokemonData(data);
+                    setIsLoading(false);
+                    console.log('pokemon data: ', pokemonData);
+                })
+                .catch((error) => {
+                    console.log('Error fetching Pokemon data: ', error);
+                    setIsLoading(false);
+                });
+        }
+    }, [pokemonName]);
 
     const handleChange = (e) => {
         setInputValue(e.target.value);
@@ -24,32 +38,34 @@ function SearchForm() {
     };
 
     return (
-        <div>
-            <form className='search-form' onSubmit={handleSubmit}>
-                {/* <select
-            value={searchType}
-            onChange={handleTypeChange}
-          >
-            <option value="name">Name</option>
-            <option value="species">Species</option>
-            <option value="ability">Ability</option>
-          </select> */}
+        <div className='search-form'>
+            <form className='form' onSubmit={handleSubmit}>
                 <input
-                    className='search-from__input'
+                    className='form__input'
                     type="text"
                     value={inputValue}
                     placeholder="Enter pokemon name"
                     onChange={handleChange}
                 />
                 <button
-                    className='search-from__button'
+                    className='form__button'
                     type="submit"
                 >
                     Search
                 </button>
             </form>
 
-            <PokemonInfo pokemonName={pokemonName} />
+            {
+                isLoading
+                    ? (
+                        <Preloader />
+                    ) : (
+                        <PokemonInfo
+                            pokemonName={pokemonName}
+                            pokemon={pokemonData}
+                        />
+                    )
+            }
         </div>
     );
 };

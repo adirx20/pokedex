@@ -4,6 +4,7 @@
     padding: 0 104px;
     display: flex;
     justify-content: space-between;
+    background-color: rgba(238, 78, 52, 1);
     color: rgba(255, 255, 255, 1);
 }
 

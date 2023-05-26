@@ -1,53 +1,43 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './PokemonInfo.css';
-import { fetchPokemonData } from '../../utils/api';
 
-function PokemonInfo({ pokemonName, searchType, searchTerm }) {
-    const [pokemonData, setPokemonData] = useState(null);
-
-    useEffect(() => {
-        fetchPokemonData({ pokemonName })
-            .then((data) => {
-                setPokemonData(data);
-                console.log('pokemon data: ', pokemonData);
-            })
-            .catch((error) => {
-                console.log('Error fetching Pokemon data: ', error);
-            });
-    }, [pokemonName]);
-
+function PokemonInfo({ pokemonName, pokemon }) {
     if (pokemonName === '') {
         return <div>No data</div>
     }
 
-    if (!pokemonData) {
+    if (!pokemon) {
         return <div>Not found</div>;
     }
 
-    const name = pokemonData.name;
-    const height = pokemonData.height;
-    const weight = pokemonData.weight;
-    const baseExp = pokemonData.base_experience;
+    const id = pokemon.id;
+    const name = pokemon.name;
+    const height = pokemon.height;
+    const weight = pokemon.weight;
+    const baseExp = pokemon.base_experience;
 
-    const imageDefault = pokemonData.sprites
-        ? pokemonData.sprites.front_default
+    const imageDefault = pokemon.sprites
+        ? pokemon.sprites.front_default
         : '';
 
-    const imageShiny = pokemonData.sprites
-        ? pokemonData.sprites.front_shiny
+    const imageShiny = pokemon.sprites
+        ? pokemon.sprites.front_shiny
         : '';
 
-    const abilities = pokemonData.abilities
-        ? pokemonData.abilities.map((ability) => ability.ability.name)
+    const abilities = pokemon.abilities
+        ? pokemon.abilities.map((ability) => ability.ability.name)
         : [];
 
-    const moves = pokemonData.moves
-        ? pokemonData.moves.map((move) => move.move.name)
+    const moves = pokemon.moves
+        ? pokemon.moves.map((move) => move.move.name)
         : [];
 
 
     return (
-        <div className='pokemon-info'>
+        <div
+            className='pokemon-info'
+            key={id}
+        >
             <h2 className='pokemon-info__title'>{name}</h2>
             <div className='pokemon-info__image-container'>
                 <img
@@ -62,9 +52,9 @@ function PokemonInfo({ pokemonName, searchType, searchTerm }) {
                 />
             </div>
             <div className='pokemon-info__text-container'>
-                <p>Base experience: {baseExp}</p>
-                <p>Height: {height}0cm</p>
-                <p>Weight: {weight}00gr</p>
+                <p className='pokemon-info__text'>Base experience: {baseExp}</p>
+                <p className='pokemon-info__text'>Height: {height}0cm</p>
+                <p className='pokemon-info__text'>Weight: {weight}00gr</p>
                 {abilities.length > 0 && (
                     <div>
                         <p>Abilities:</p>

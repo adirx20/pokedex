@@ -1,0 +1,19 @@
+.pokemon-info {
+    background-color: rgba(252, 237, 218, 1);
+}
+
+.pokemon-info__title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.pokemon-info__image-container {}
+
+.pokemon-info__image-default {}
+
+.pokemon-info__image-shiny {}
+
+.pokemon-info__text-container {}
+
+.pokemon-info__text {}
