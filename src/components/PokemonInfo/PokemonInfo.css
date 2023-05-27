@@ -1,27 +1,98 @@
 .pokemon-info {
+    padding: 30px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     background-color: rgba(252, 237, 218, 1);
 }
 
-.pokemon-info__title {
-    font-family: 'PokemonGb', sans-serif;
-    font-size: 40px;
-    font-weight: 700;
+.pokemon-info__info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex: 1;
 }
 
-.pokemon-info__image-container {}
+.pokemon-info__title {
+    margin: 10px 0 100px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 50px;
+}
 
-.pokemon-info__image-default {}
+.pokemon-info__image-container {
+    margin: 0 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
 
-.pokemon-info__image-shiny {}
+.pokemon-info__image-text {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
 
-.pokemon-info__text-container {}
+.pokemon-info__small-image {
+    margin: 0 0 10px;
+    object-fit: none;
+}
+
+.pokemon-info__text-container {
+    padding: 0 0 0 100px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+}
 
 .pokemon-info__text {
-    font-family: 'PokemonGb', sans-serif;
-    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
     font-weight: 400;
 }
 
 .pokemon-info__text_bold {
     font-weight: 700;
+}
+
+.pokemon-info__text-list {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pokemon-info__artwork-image {
+    max-width: 475px;
+    object-fit: cover;
+}
+
+.pokemon-info__note {
+    padding: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    align-self: center;
+}
+
+.button__show-more {
+    color: rgba(0, 0, 0, .5);
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: color .3s linear;
+}
+
+.button__show-more:hover {
+    color: rgba(0, 0, 0, 1);
 }

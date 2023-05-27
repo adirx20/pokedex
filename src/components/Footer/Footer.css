@@ -36,4 +36,9 @@
 .footer__link {
     color: rgba(26, 27, 34, 1);
     text-decoration: none;
+    transition: color .3s linear;
+}
+
+.footer__link:hover {
+    color:rgba(26, 27, 34, .5)
 }

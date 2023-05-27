@@ -1,29 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
+import './Main.css';
 import SearchForm from '../SearchForm/SearchForm';
-import PokemonInfo from '../PokemonInfo/PokemonInfo';
 
 function Main() {
-  const [inputValue, setInputValue] = useState('');
-  const [searchType, setSearchType] = useState('name');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const handleTypeChange = (e) => {
-    setSearchType(e.target.value);
-  }
-
-  const handleTermChange = (e) => {
-    setInputValue(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSearchTerm(inputValue);
-    // Handle form submission, such as fetching data
-    console.log('Submit form:', searchType, searchTerm);
-  };
 
   return (
     <main className='main'>
+      <h2 className='main__title'>
+        Welcome to the Pokémon Search
+      </h2>
+      <p className='main__text'>
+        Explore the world of Pokémon and search for your favorite Pokémon below!
+      </p>
       <SearchForm />
     </ main>
   );

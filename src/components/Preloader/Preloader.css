@@ -1,0 +1,15 @@
+.preloader {
+    padding: 20px;
+}
+
+.preloader__icon {
+    width: 250px;
+    background-color: transparent;
+}
+
+.preloader__text {
+    margin: 20px 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+}

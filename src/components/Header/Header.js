@@ -13,7 +13,7 @@ function Header({ children }) {
                     () => navigate('/')
                 }
             >
-                PokeDex
+                PokéDex
             </span>
             {children}
         </header>
