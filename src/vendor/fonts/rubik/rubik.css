@@ -3,15 +3,15 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('./Rubik-Regular-400.woff2') format('woff2');
+    src: url('./Rubik-Regular-400.woff') format('woff'), url('./Rubik-Regular-400.woff2') format('woff2');
 }
 
-@font-face {
+/* @font-face {
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: url('./Rubik-Medium-500.woff2') format('woff2');
+    src: url('./Rubik-Regular-500.woff') format('woff'), url('./Rubik-Medium-500.woff2') format('woff2');
 }
 
 @font-face {
@@ -19,7 +19,7 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url('./Rubik-Bold-700.woff2') format('woff2');
+    src: url('./Rubik-Regular-700.woff') format('woff'), url('./Rubik-Bold-700.woff2') format('woff2');
 }
 
 @font-face {
@@ -27,5 +27,5 @@
     font-style: normal;
     font-weight: 900;
     font-display: swap;
-    src: url('./Rubik-Black-900.woff2') format('woff2');
-}
+    src: url('./Rubik-Regular-900.woff') format('woff'), url('./Rubik-Black-900.woff2') format('woff2');
+} */

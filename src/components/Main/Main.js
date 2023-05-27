@@ -25,26 +25,6 @@ function Main() {
   return (
     <main className='main'>
       <SearchForm />
-      {/* <form className='form' onSubmit={handleSubmit}> */}
-      {/* <select
-          value={searchType}
-          onChange={handleTypeChange}
-        >
-          <option value="name">Name</option>
-          <option value="species">Species</option>
-          <option value="ability">Ability</option>
-        </select>
-        <input
-          type="text"
-          value={inputValue}
-          placeholder="Enter search term"
-          onChange={handleTermChange}
-        />
-        <button type="submit">Search</button>
-      </form> */}
-
-      {/* <PokemonInfo searchType={searchType} searchTerm={searchTerm} /> */}
-
     </ main>
   );
 }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './SearchForm.css';
 import PokemonInfo from '../PokemonInfo/PokemonInfo';
 import Preloader from '../Preloader/Preloader';
-import { fetchPokemonData } from '../../utils/api';
+import { fetchPokemonData, getPokemonData } from '../../utils/api';
 
 function SearchForm() {
     const [inputValue, setInputValue] = useState('');
@@ -13,7 +13,7 @@ function SearchForm() {
     useEffect(() => {
         if (pokemonName !== '') {
             setIsLoading(true);
-            fetchPokemonData({ pokemonName })
+            getPokemonData({ pokemonName })
                 .then((data) => {
                     setPokemonData(data);
                     setIsLoading(false);

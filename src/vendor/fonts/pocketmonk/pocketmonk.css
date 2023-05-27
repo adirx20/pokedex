@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'PocketMonk';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./PocketMonk-Bold-700.woff') format('woff'),
+        url('./PocketMonk-Bold-700.woff2') format('woff2');
+}

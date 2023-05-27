@@ -10,6 +10,11 @@ function Navigation({ children }) {
         // onClose
     }
 
+    function navigateToPokemonList() {
+        navigate('/pokemon-list');
+        // onClose
+    }
+
     function navigateToAbout() {
         navigate('/about');
         // onClose
@@ -23,6 +28,12 @@ function Navigation({ children }) {
             >
                 Home
             </button>
+            {/* <button
+                className='navigation__menu-button'
+                onClick={navigateToPokemonList}
+            >
+                All Pokémons
+            </button> */}
             <button
                 className='navigation__menu-button'
                 onClick={navigateToAbout}

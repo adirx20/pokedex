@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'PokemonGb';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./PokemonGb-Regular-400.woff') format('woff'),
+        url('./PokemonGb-Regular-400.woff2') format('woff2');
+}

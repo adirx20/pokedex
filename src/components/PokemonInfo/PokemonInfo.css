@@ -3,7 +3,7 @@
 }
 
 .pokemon-info__title {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'PokemonGb', sans-serif;
     font-size: 40px;
     font-weight: 700;
 }
@@ -16,4 +16,12 @@
 
 .pokemon-info__text-container {}
 
-.pokemon-info__text {}
+.pokemon-info__text {
+    font-family: 'PokemonGb', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.pokemon-info__text_bold {
+    font-weight: 700;
+}
