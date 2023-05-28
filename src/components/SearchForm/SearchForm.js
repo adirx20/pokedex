@@ -32,7 +32,7 @@ function SearchForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setPokemonName(inputValue);
+        setPokemonName(inputValue.toLowerCase());
         // Handle form submission, such as fetching data
         console.log('Submit form:', pokemonName);
     };

@@ -71,7 +71,9 @@ function PokemonInfo({ pokemonName, pokemon }) {
             className='pokemon-info'
             key={id}
         >
-            <h2 className='pokemon-info__title'>{name}</h2>
+            <h2 className='pokemon-info__title'>
+                {name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()}
+            </h2>
             <div className='pokemon-info__info-container'>
                 <div className='pokemon-info__image-container'>
                     <span className='pokemon-info__image-text'>
