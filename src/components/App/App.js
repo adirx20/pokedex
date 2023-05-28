@@ -27,12 +27,12 @@ function App() {
                 <Main />
               }
             />
-            <Route
+            {/* <Route
               path='/pokemon-list'
               element={
                 <PokemonList />
               }
-            />
+            /> */}
             <Route
               path='/about'
               element={
