@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { Routes, Route, BrowserRouter, Router } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
 import CurrentUserContext from '../../contexts/CurrentUserContext';
 import Header from '../Header/Header';
 import Navigation from '../Navigation/Navigation';
 import Main from '../Main/Main';
-import PokemonList from '../PokemonList/PokemonList';
 import About from '../About/About';
 import Footer from '../Footer/Footer';
 
