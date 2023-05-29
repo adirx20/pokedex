@@ -7,14 +7,14 @@ function Header({ children }) {
 
     return (
         <header className='header'>
-            <span
+            <h2
                 className='header__site-title'
                 onClick={
                     () => navigate('/')
                 }
             >
                 PokéDex
-            </span>
+            </h2>
             {children}
         </header>
     );

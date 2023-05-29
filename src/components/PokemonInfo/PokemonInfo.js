@@ -111,44 +111,44 @@ function PokemonInfo({ pokemonName, pokemon }) {
                 </div>
                 <div className='pokemon-info__text-container'>
                     <p className='pokemon-info__text'>
-                        <span className='pokemon-info__text_bold'>
+                        <span className='pokemon-info__text_style_bold'>
                             Pokemon ID:&nbsp;
                         </span>
                         {id}
                     </p>
                     <p className='pokemon-info__text'>
-                        <span className='pokemon-info__text_bold'>
+                        <span className='pokemon-info__text_style_bold'>
                             Type:&nbsp;
                         </span>
                         {type}
                     </p>
                     <p className='pokemon-info__text'>
-                        <span className='pokemon-info__text_bold'>
+                        <span className='pokemon-info__text_style_bold'>
                             Base stat:&nbsp;
                         </span>
                         {baseStat}
                     </p>
                     <p className='pokemon-info__text'>
-                        <span className='pokemon-info__text_bold'>
+                        <span className='pokemon-info__text_style_bold'>
                             Base experience:&nbsp;
                         </span>
                         {baseExp}
                     </p>
                     <p className='pokemon-info__text'>
-                        <span className='pokemon-info__text_bold'>
+                        <span className='pokemon-info__text_style_bold'>
                             Height:&nbsp;
                         </span>
                         {height}0cm
                     </p>
                     <p className='pokemon-info__text'>
-                        <span className='pokemon-info__text_bold'>
+                        <span className='pokemon-info__text_style_bold'>
                             Weight:&nbsp;
                         </span>
                         {weight}00gr
                     </p>
                     {abilities.length > 0 && (
                         <div>
-                            <p className='pokemon-info__text pokemon-info__text_bold'>
+                            <p className='pokemon-info__text pokemon-info__text_style_bold'>
                                 Abilities:&nbsp;
                             </p>
                             <ul className='pokemon-info__text-list'>
@@ -165,7 +165,7 @@ function PokemonInfo({ pokemonName, pokemon }) {
                     )}
                     {moves.length > 0 && (
                         <div>
-                            <p className='pokemon-info__text pokemon-info__text_bold'>
+                            <p className='pokemon-info__text pokemon-info__text_style_bold'>
                                 Moves:&nbsp;
                             </p>
                             <ul className='pokemon-info__text-list'>
