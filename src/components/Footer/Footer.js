@@ -6,9 +6,9 @@ import facebookIcon from '../../images/facebook-icon.svg';
 function Footer() {
     return (
         <footer className='footer'>
-            <span className='footer__watermark'>
+            <p className='footer__watermark'>
                 &copy; {new Date().getFullYear()} Adir's PokeDex, powered by PokeAPI
-            </span>
+            </p>
             <nav className='footer__navigation'>
                 <div className='footer__link-container'>
                     <div className='footer__text-link-container'>

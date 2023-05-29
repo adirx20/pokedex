@@ -20,7 +20,7 @@ function SearchForm() {
                     console.log('pokemon data: ', pokemonData);
                 })
                 .catch((error) => {
-                    console.log('Error fetching Pokemon data: ', error);
+                    throw new Error('Error in getting this pokemon');
                     setIsLoading(false);
                 });
         }

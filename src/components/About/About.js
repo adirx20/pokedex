@@ -5,9 +5,15 @@ import pokedexImage from '../../images/pokedex-image.png';
 function About() {
     return (
         <section className='about'>
-            <img className='about__image' src={pokedexImage} />
+            <img
+                className='about__image'
+                src={pokedexImage}
+                alt='Pokedex'
+            />
             <article className='about__text-container'>
-                <h2 className='about__title'>About PokeDex</h2>
+                <h2 className='about__title'>
+                    About PokeDex
+                </h2>
                 <p className='about__text'>
                     A Pokédex is an electronic device used by Pokémon trainers to catalog information about various Pokémon species.
                     It provides details such as their abilities, moves, types, and more.
