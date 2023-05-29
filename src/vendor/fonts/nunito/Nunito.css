@@ -6,30 +6,3 @@
     src: url('./Nunito-Regular-400.woff') format('woff'),
         url('./Nunito-Regular-400.woff2') format('woff2');
 }
-
-/* @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url('./Nunito-Regular-500.woff') format('woff'),
-        url('./Nunito-Regular-500.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url('./Nunito-Regular-700.woff') format('woff'),
-        url('./Nunito-Regular-700.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
-    src: url('./Nunito-Regular-900.woff') format('woff'),
-        url('./Nunito-Regular-900.woff2') format('woff2');
-} */
