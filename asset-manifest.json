@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/pokedex/static/css/main.49a5973c.css",
+    "main.js": "/pokedex/static/js/main.716da0c3.js",
+    "static/js/787.7e0b23c5.chunk.js": "/pokedex/static/js/787.7e0b23c5.chunk.js",
+    "static/media/pokedex-image.png": "/pokedex/static/media/pokedex-image.5d8684f83a0d0988da90.png",
+    "static/media/preloader-mew-icon.gif": "/pokedex/static/media/preloader-mew-icon.e1481cd4aa38c17b6627.gif",
+    "static/media/Nunito-Regular-400.woff2": "/pokedex/static/media/Nunito-Regular-400.07adf0b2f5cb89c62ba7.woff2",
+    "static/media/Rubik-Regular-400.woff2": "/pokedex/static/media/Rubik-Regular-400.6b715f880c45cde6dff8.woff2",
+    "static/media/Rubik-Regular-400.woff": "/pokedex/static/media/Rubik-Regular-400.376175625c81dd6689e3.woff",
+    "static/media/Nunito-Regular-400.woff": "/pokedex/static/media/Nunito-Regular-400.53cc981c49d5afbd6f47.woff",
+    "static/media/PocketMonk-Bold-700.woff": "/pokedex/static/media/PocketMonk-Bold-700.0df2b634b83667077c4f.woff",
+    "static/media/PocketMonk-Bold-700.woff2": "/pokedex/static/media/PocketMonk-Bold-700.08abdbdd58fc90cdf5e6.woff2",
+    "static/media/PokemonGb-Regular-400.woff": "/pokedex/static/media/PokemonGb-Regular-400.ddce36c9be1f61cd8bdc.woff",
+    "static/media/PokemonGb-Regular-400.woff2": "/pokedex/static/media/PokemonGb-Regular-400.f8e09f916ef667eb3e41.woff2",
+    "static/media/github-icon.svg": "/pokedex/static/media/github-icon.2699c069b9af9dc4d8e8c27b7589b810.svg",
+    "index.html": "/pokedex/index.html",
+    "static/media/facebook-icon.svg": "/pokedex/static/media/facebook-icon.ce8865e2b31c465027289c1e17510de5.svg",
+    "main.49a5973c.css.map": "/pokedex/static/css/main.49a5973c.css.map",
+    "main.716da0c3.js.map": "/pokedex/static/js/main.716da0c3.js.map",
+    "787.7e0b23c5.chunk.js.map": "/pokedex/static/js/787.7e0b23c5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.49a5973c.css",
+    "static/js/main.716da0c3.js"
+  ]
+}
