@@ -19,8 +19,13 @@
 }
 
 @media screen and (max-width: 768px) {
+    .main {
+        padding: 20px 30px;
+    }
+
     .main__title {
         font-size: 36px;
+        line-height: 50px;
     }
 
     .main__text {
