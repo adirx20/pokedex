@@ -97,3 +97,39 @@
 .button__show-more:hover {
     color: rgba(0, 0, 0, 1);
 }
+
+@media screen and (max-width: 1100px) {
+    .pokemon-info {
+        padding: 20px 20px;
+    }
+
+    .pokemon-info__artwork-image {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .pokemon-info {
+        padding: 20px 10px;
+    }
+
+    .pokemon-info__artwork-image {
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .pokemon-info__title {
+        margin-bottom: 50px;
+        font-size: 50px;
+        line-height: 40px;
+    }
+
+    .pokemon-info__text-container {
+        padding: 10px 0 100px;
+    }
+
+    .pokemon-info__artwork-image {
+        max-width: 200px;
+    }
+}

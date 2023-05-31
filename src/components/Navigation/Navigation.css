@@ -29,3 +29,14 @@
 .navigation__menu-button_active {
     border-bottom: 3px solid rgba(255, 255, 255, 1);
 }
+
+@media screen and (max-width: 768px) {
+    .navigation {
+        gap: 20px;
+    }
+
+    .navigation__menu-button {
+        max-width: 100px;
+        padding: 20px;
+    }
+}

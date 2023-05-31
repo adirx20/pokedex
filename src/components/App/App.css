@@ -1,6 +1,6 @@
 /* App */
 .app {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   background-color: rgba(253, 76, 76, 1);
 }
